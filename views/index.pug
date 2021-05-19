@@ -2,7 +2,7 @@ extends layout.pug
 block content
     table
         h2 Existing Users
-            tr
+            thead
                 th id
                 th First Name
                 th Last Name
@@ -10,12 +10,13 @@ block content
                 th Age
                 th Favorite Beatle
                 th Likes Ice Cream
-                    each user in users
-                        tr
-                            td= user.id
-                            td= user.firstName
-                            td= user.lastName
-                            td= user.email
-                            td= user.age
-                            td= user.favoriteBeatle
-                            td= user.iceCream
+                    tbody
+                        each user in users
+                            tr
+                                td= user.id
+                                td= user.firstName
+                                td= user.lastName
+                                td= user.email
+                                td= user.age
+                                td= user.favoriteBeatle
+                                td= user.iceCream
