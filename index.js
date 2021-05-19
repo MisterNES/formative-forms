@@ -5,11 +5,6 @@ const port = process.env.PORT || 3000;
 
 app.set("view engine", "pug");
 
-app.get("/", (req, res) => {
-  //res.send("Hello World!");
-  res.render('index', users)
-});
-
 const users = [
   {
     id: 1,
@@ -18,6 +13,13 @@ const users = [
     email: "jill.jack@gmail.com"
   }
 ];
+
+app.get("/", (req, res) => {
+  //res.send("Hello World!");
+  res.render('index', {users})
+});
+
+
 
 app.listen(port, () => console.log(`Example app listening on port ${port}!`));
 
