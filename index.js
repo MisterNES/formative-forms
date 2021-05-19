@@ -6,7 +6,8 @@ const port = process.env.PORT || 3000;
 app.set("view engine", "pug");
 
 app.get("/", (req, res) => {
-  res.send("Hello World!");
+  //res.send("Hello World!");
+  res.render('index', users)
 });
 
 const users = [
