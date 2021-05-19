@@ -1,0 +1,35 @@
+extends layout.pug
+block content
+    include includes/errors.pug
+    form(action="/create-interesting" method="post")
+        input(type="hidden" name="_csrf" value=csrfToken)
+        label(for="firstName") First Name
+        input(type="text" name="firstName" value=firstName)
+        br
+        label(for="lastName") Last Name
+        input(type="text" name="lastName" value=lastName)
+        br
+        label(for="email") Email
+        input(type="email" name="email" value=email)
+        br
+        label(for="password") Password        
+        input(type="password" name="password")
+        br
+        label(for="confirmedPassword") Confirmed Password
+        input(type="password" name="confirmedPassword")
+        br
+        label(for="age") Age
+        input(type="number" name="age")
+        br
+        label(for="favoriteBeatle") Favorite Beatle
+        select(name="favoriteBeatle")
+            option(value = "") --Please choose an option--
+            option(value="John") John
+            option(value="Paul") Paul
+            option(value="Ringo") Ringo
+            option(value="George") George
+            option(value="Scooby-Doo") Scooby-Doo
+        br
+        label(for="iceCream") Do you like ice cream?
+        input(type="checkbox" name="iceCream")
+        input(type="submit" value="Create Interesting User")
