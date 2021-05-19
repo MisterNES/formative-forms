@@ -8,16 +8,18 @@
     "debug": "nodemon --inspect index.js",
     "test": "PORT=3001 mocha test --exit",
     "test1": "PORT=3001 mocha test/01_home.test.js --timeout 5000 --exit",
-    "test2": "PORT=3001 mocha test/02_create_form.test.js --exit",
-    "test3": "PORT=3001 mocha test/03_form_submit.test.js --exit",
-    "test4": "PORT=3001 mocha test/04_create_interesting_form.test.js --exit",
-    "test5": "PORT=3001 mocha test/05_interesting_form_submit.test.js --exit",
-    "test-with-json": "PORT=3001 mocha test --reporter json --exit"
+    "test2": "PORT=3001 mocha test/02_create_form.test.js --timeout 5000 --exit",
+    "test3": "PORT=3001 mocha test/03_form_submit.test.js --timeout 5000 --exit",
+    "test4": "PORT=3001 mocha test/04_create_interesting_form.test.js --timeout 5000 --exit",
+    "test5": "PORT=3001 mocha test/05_interesting_form_submit.test.js --timeout 5000 --exit",
+    "test-with-json": "PORT=3001 mocha test --timeout 5000 --reporter json --exit"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "cookie-parser": "^1.4.5",
+    "csurf": "^1.11.0",
     "express": "^4.17.1",
     "pug": "^3.0.2"
   },
